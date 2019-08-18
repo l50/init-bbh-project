@@ -17,7 +17,7 @@ var (
 	path   string
 )
 
-// init specifies the input parameters that mose can take.
+// init specifies the input parameters that init-bbh-project can take.
 func init() {
 	home, err := utils.GetHomeDir()
 	if err != nil {
@@ -27,7 +27,7 @@ func init() {
 	flag.StringVar(&path, "p", filepath.FromSlash(home+"/bug_bounty_hunting/"), "Path to folder for bug bounty program work.")
 }
 
-// usage prints the usage instructions for mose.
+// usage prints the usage instructions for init-bbh-project
 func usage() {
 	os.Args[0] = os.Args[0] + " [options]"
 	flag.Usage()
