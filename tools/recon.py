@@ -43,7 +43,7 @@ def dr_robot(sites):
 def dirb(sites):
     for site in sites:
         name = __get_name__(site)
-        cmd = f"docker run -v {os.path.dirname(os.path.abspath(__file__))}/dirb:/dirb --rm -it --name=dirb-{name} l505/dirb {site} -o /dirb/{name}"
+        cmd = f"docker run -v {os.path.dirname(os.path.abspath(__file__))}/dirb:/dirb --rm -it --name=dirb-{name} l505/dirb {site} -o recon/dirb/{name}"
         print(f"Running the following command: {cmd}")
         run_cmd(cmd)
 
@@ -51,7 +51,7 @@ def dirb(sites):
 def gobuster(sites):
     for site in sites:
         name = __get_name__(site)
-        cmd = f"gobuster -e -u {site} -w {args.sec}/Discovery/Web-Content/dirb/common.txt -v -f -t 40 -o ./gobuster/{name}.txt"
+        cmd = f"gobuster -e -u {site} -w {args.sec}/Discovery/Web-Content/dirb/common.txt -v -f -t 40 -o recon/gobuster/{name}.txt"
         print(f"Running the following command: {cmd}")
         run_cmd(cmd)
 
