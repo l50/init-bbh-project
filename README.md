@@ -7,8 +7,7 @@ This project is used to create a workspace with the necessary tools I need for b
 
 ## Installation
 ```
-go get -u gopkg.in/src-d/go-git.v4/...
-go build
+make build
 ```
 
 ## Create a project

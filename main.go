@@ -6,10 +6,11 @@ package main
 
 import (
 	"flag"
-	"github.com/l50/goutils"
 	"log"
 	"os"
 	"path/filepath"
+
+	utils "github.com/l50/goutils"
 )
 
 var (
